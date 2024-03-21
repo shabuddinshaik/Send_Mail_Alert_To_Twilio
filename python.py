@@ -10,6 +10,7 @@ auth_token = 'your_auth_token'
 client = Client(account_sid, auth_token)
 
 # Set up logging
+log_filename = datetime.datetime.now().strftime('twilio_Alert_%Y_%m_%d.logs')
 logging.basicConfig(filename='twilio_Alert.logs', level=logging.INFO)
 
 def check_email_and_send_alert():
